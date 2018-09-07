@@ -33,6 +33,10 @@ public class DataController {
      */
     private final DataService dataService;
 
+    /**
+     * Constructor.
+     * @param dataService - data service.
+     */
     @Autowired
     public DataController(DataService dataService) {
         this.dataService = dataService;

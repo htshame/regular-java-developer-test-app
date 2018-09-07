@@ -25,14 +25,14 @@ public class Storage {
      * Add data to storage.
      * @param dataEntity - data to add.
      */
-    public void addData(DataEntity dataEntity) {
+    public synchronized void addData(DataEntity dataEntity) {
         STORAGE.add(dataEntity);
     }
 
     /**
      * Delete all data.
      */
-    public void clearStorage() {
+    public synchronized void clearStorage() {
         STORAGE.clear();
     }
 
@@ -41,7 +41,7 @@ public class Storage {
      * @param date - date since get data from storage.
      * @return stored data.
      */
-    public List<DataEntity> getStoredDataSinceDate(Date date) {
+    public synchronized List<DataEntity> getStoredDataSinceDate(Date date) {
         return STORAGE.stream().filter(p -> (p.getTimestamp().after(date))).collect(Collectors.toList());
     }
 
@@ -49,7 +49,7 @@ public class Storage {
      * Get number of records in storage.
      * @return number of records in storage.
      */
-    public int getRecordsNumber() {
+    public synchronized int getRecordsNumber() {
         return STORAGE.size();
     }
 }

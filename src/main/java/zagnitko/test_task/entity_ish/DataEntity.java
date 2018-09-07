@@ -17,7 +17,13 @@ import java.util.Date;
 @NoArgsConstructor
 public class DataEntity {
 
+    /**
+     * Data amount.
+     */
     private BigDecimal amount;
 
+    /**
+     * Data time.
+     */
     private Date timestamp;
 }

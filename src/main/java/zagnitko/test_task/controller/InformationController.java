@@ -27,6 +27,10 @@ public class InformationController {
      */
     private final InformationService informationService;
 
+    /**
+     * Constructor.
+     * @param informationService - information service.
+     */
     @Autowired
     public InformationController(InformationService informationService) {
         this.informationService = informationService;

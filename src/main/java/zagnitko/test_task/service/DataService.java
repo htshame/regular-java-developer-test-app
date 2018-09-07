@@ -31,8 +31,15 @@ public class DataService {
     @Value("${minutes.to.subtract}")
     private int MINUTES_TO_SUBTRACT;
 
+    /**
+     * Data storage.
+     */
     private final Storage storage;
 
+    /**
+     * Constructor.
+     * @param storage - data storage.
+     */
     @Autowired
     public DataService(Storage storage) {
         this.storage = storage;

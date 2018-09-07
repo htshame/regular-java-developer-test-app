@@ -35,9 +35,21 @@ public class InformationService {
     @Value("${round.up.bigdecimal.to}")
     private int ROUND_UP_TO;
 
+    /**
+     * Data service.
+     */
     private final DataService dataService;
+
+    /**
+     * Data storage.
+     */
     private final Storage storage;
 
+    /**
+     * Constructor.
+     * @param dataService - data service.
+     * @param storage - data storage.
+     */
     @Autowired
     public InformationService(DataService dataService, Storage storage) {
         this.dataService = dataService;
